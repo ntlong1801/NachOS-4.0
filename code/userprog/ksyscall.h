@@ -164,15 +164,12 @@ void SysReadString(char *buffer, int length)
 /*  Xu ly syscall PrintString
     Input: buffer (char*) de in ra man hinh
 */
-void SysPrintString(char *buffer,int length)
+void SysPrintString(char *buffer)
 {
+    int length = 0;
     while (buffer[length]) // loop until meet '\0'
     {
         kernel->synchConsoleOut->PutChar(buffer[length++]);
     }
 }
-
-
-
-
 #endif /* ! __USERPROG_KSYSCALL_H__ */
