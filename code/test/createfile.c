@@ -3,6 +3,10 @@
 #define maxlen 32
 int main()
 {
-    PrintNum(ReadNum());
+    char a[256];
+    PrintString("String length: (<= 255):\n");
+    ReadString(a, ReadNum());
+    // PrintNum(ReadNum());
+    PrintString(a);
     Halt();
 }
